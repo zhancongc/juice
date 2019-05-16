@@ -5,9 +5,7 @@ from .forms import LoginForm
 
 
 def index(request):
-    name = request.GET.get('name')
-    print(name or 'World')
-    return HttpResponse('Hello, {name}!'.format(name=name or 'World'))
+    return render(request, 'index.html')
 
 
 def user_pass(request):
